@@ -18,6 +18,7 @@
 
 input {
   border: none;
+  min-width: 50px;
 }
 
 textarea:focus, input:focus{
@@ -137,4 +138,19 @@ textarea:focus, input:focus{
 .Button-activityIndicator-wrapper {
   display: grid;
   justify-content: center;
+}
+
+.NewPrice-wrapper-centered {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 5px;
+  column-gap: 5px;
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
+}
+
+.NewPrice-spanTwoColumns {
+  grid-column: span 2;
 }
