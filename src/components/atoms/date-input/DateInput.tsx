@@ -1,32 +1,19 @@
-import React from "react"
-
-type TextInputProps = {
+type DateInputProps = {
   title: string
   value: string
-  editable?: boolean
-  maxLength?: number
+  readonly?: boolean
   setValue: (newValue: string) => void
 }
 
-function TextInput({ value, setValue, title, editable, maxLength }: TextInputProps) {
-
-  const onChangeEvent = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (maxLength)
-      if (e.target.value.length <= maxLength) 
-        setValue(e.target.value)
-
-    if (!maxLength)
-      setValue(e.target.value)
-  }
-
+function DateInput({ title, value, setValue, readonly }: DateInputProps) {
   return (
-    <div className="TextInput-main">
-      <div className="TextInput-title">
+    <div className="DateInput-main">
+      <div className="DateInput-title">
         { title }
       </div>
-      <input data-testid="TextInput-input-tid" className="TextInput-input" type="date" value={value} onChange={(e) => onChangeEvent(e)}/>
+      <input readOnly={!readonly ? false : true} className="DateInput-input" type="date" onChange={(e) => setValue(e.target.value)} value={value}/>
     </div>
   )
 }
 
-export default TextInput
+export default DateInput

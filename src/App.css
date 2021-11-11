@@ -25,17 +25,17 @@ textarea:focus, input:focus{
   outline: none;
 }
 
-.TextInput-main {
+.TextInput-main, .DateInput-main {
   display: grid;
 }
 
-.TextInput-title {
+.TextInput-title, .DateInput-title {
   background: var(--backgroundPrimary);
   color: white;
   padding-bottom: 3px;
 }
 
-.TextInput-input {
+.TextInput-input, .DateInput-input {
   padding-top: 4px;
   padding-bottom: 4px;
   font-size: var(--inputFontSize);
