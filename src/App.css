@@ -2,6 +2,7 @@
 
 :root {
   --backgroundPrimary: rgb(108, 36, 202);
+  --backgroundPrimaryLighter: rgb(128, 76, 195);
 
   --latoFont: 'Lato', sans-serif;
   --textColor: rgb(54, 53, 53);
@@ -58,7 +59,7 @@ textarea:focus, input:focus{
 .ActivityIndicator-square {
   height: 5px;
   width: 5px;
-  background: var(--backgroundPrimary);
+  background: var(--backgroundPrimaryLighter);
   animation: ActivityIndicator-move 4s infinite;
 }
 
@@ -115,4 +116,25 @@ textarea:focus, input:focus{
     margin-left: 80px;
     width: 20px;
   }
+}
+
+.Button-button {
+  height: 40px;
+  display: grid;
+  align-items: center;
+  background: var(--backgroundPrimary);
+  color: white;
+  border: none;
+  font-size: var(--inputFontSize);
+  width: 100%;
+}
+
+.Button-button:hover {
+  background: var(--backgroundPrimaryLighter);
+  transition: background 0.5s;
+}
+
+.Button-activityIndicator-wrapper {
+  display: grid;
+  justify-content: center;
 }
