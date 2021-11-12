@@ -154,3 +154,58 @@ textarea:focus, input:focus{
 .NewPrice-spanTwoColumns {
   grid-column: span 2;
 }
+
+.Popup-main {
+  width: 250px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  border: solid 2px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 3px;
+  padding-right: 3px;
+  font-size: 15px;
+  animation: 1s popupSlideInFromLeft;
+}
+
+@keyframes popupSlideInFromLeft {
+  from {
+    right: -350px;
+  }
+
+  to {
+    right: 10px;
+  }
+}
+
+.Popup-mian-information {
+  background: rgb(114, 154, 219);
+  border-color: rgb(18, 61, 131);
+}
+
+.Popup-mian-warning {
+  background: rgb(221, 199, 102);
+  border-color: rgb(170, 140, 7);
+}
+
+.Popup-mian-error {
+  background: rgb(216, 119, 102);
+  border-color: rgb(190, 43, 18);
+}
+
+.Popup-hide {
+  position: absolute;
+  right: 3px;
+  top: 0px;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}

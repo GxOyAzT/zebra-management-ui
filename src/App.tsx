@@ -1,10 +1,13 @@
 import './App.css';
-import PriceCreate from './components/views/price-create/PriceCreate';
+import MainLayout from './components/layouts/MainLayout';
+import PopupContext from './contexts/PopupContext';
 
 function App() {
   return (
     <div className="App">
-      <PriceCreate productId="123"/>
+      <PopupContext>
+        <MainLayout/>
+      </PopupContext>
     </div>
   );
 }
