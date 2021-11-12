@@ -3,12 +3,13 @@ import React from "react"
 type TextInputProps = {
   title: string
   value: string
-  editable?: boolean
+  readonly?: boolean
   maxLength?: number
   setValue: (newValue: string) => void
+  incorrectValue?: boolean
 }
 
-function TextInput({ value, setValue, title, editable, maxLength }: TextInputProps) {
+function TextInput({ value, setValue, title, readonly, maxLength }: TextInputProps) {
 
   const onChangeEvent = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (maxLength)
@@ -32,7 +33,7 @@ function TextInput({ value, setValue, title, editable, maxLength }: TextInputPro
         ) :
         <></>
       }
-      <input data-testid="TextInput-input-tid" className="TextInput-input" type="text" value={value} onChange={(e) => onChangeEvent(e)}/>
+      <input readOnly={!readonly ? false : true} data-testid="TextInput-input-tid" className="TextInput-input" type="text" value={value} onChange={(e) => onChangeEvent(e)}/>
     </div>
   )
 }
