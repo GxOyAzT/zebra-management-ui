@@ -156,6 +156,7 @@ textarea:focus, input:focus{
 }
 
 .Popup-main {
+  min-height: 22px;
   width: 250px;
   position: fixed;
   top: 10px;

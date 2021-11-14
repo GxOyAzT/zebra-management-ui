@@ -29,7 +29,7 @@ export type PopupModel = {
   message: string,
 }
 
-type PopupContextModel = {
+export type PopupContextModel = {
   popup: PopupModel | null
   setPopup: (popup: PopupModel | null) => void
 }
