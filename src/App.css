@@ -169,8 +169,8 @@ textarea:focus, input:focus{
 }
 
 .Popup-mian-warning {
-  background: rgb(221, 199, 102);
-  border-color: rgb(170, 140, 7);
+  background: rgb(245, 187, 52);
+  border-color: rgb(144, 119, 7);
 }
 
 .Popup-mian-error {
@@ -178,10 +178,25 @@ textarea:focus, input:focus{
   border-color: rgb(190, 43, 18);
 }
 
+.Popup-mian-success {
+  background: rgb(65, 197, 61);
+  border-color: rgb(19, 143, 15);
+}
+
 .Popup-hide {
   position: absolute;
   right: 3px;
   top: 0px;
+}
+
+.Popup-bar-wrapper {
+  height: 10px;
+  opacity: 0.2;
+  width: 100%;
+}
+
+.Popup-bar-progress {
+  background: rgb(220, 224, 231);
 }
 
 .noselect {
